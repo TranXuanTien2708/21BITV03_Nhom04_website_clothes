@@ -182,7 +182,7 @@ namespace _21BITV03_Nhom04_website_clothes.Controllers
                 _context.AspNetUsers.Add(user);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
 
             ViewBag.Roles = _context.AspNetRoles.ToList();
