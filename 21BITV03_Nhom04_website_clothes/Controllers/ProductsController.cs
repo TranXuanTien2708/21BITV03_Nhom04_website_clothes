@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using _21BITV03_Nhom04_website_clothes.Data;
 using _21BITV03_Nhom04_website_clothes.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _21BITV03_Nhom04_website_clothes.Controllers
 {
+    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class ProductsController : Controller
     {
         private readonly WebsiteClothesContext _context;

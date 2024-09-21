@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Truy cập bị từ chối";
+    Layout = "~/Views/Shared/_Layout_LoginAndRegister.cshtml";
+}
+
+<div class="container-fluid page-header-login py-5">
+    <h1 class="text-center text-white display-6">Truy cập bị từ chối</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Truy cập bị từ chối</li>
+    </ol>
+</div>
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center">
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Truy cập bị từ chối!</h4>
+                <p>Bạn không có đủ quyền để truy cập vào trang này. Vui lòng liên hệ quản trị viên nếu bạn nghĩ đây là lỗi.</p>
+                <hr>
+            </div>
+            <a href="@Url.Action("Index", "Home")" class="btn btn-primary mt-4">Quay lại trang chủ</a>
+        </div>
+    </div>
+</div>

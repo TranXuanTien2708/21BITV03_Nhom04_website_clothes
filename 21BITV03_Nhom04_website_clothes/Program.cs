@@ -1,4 +1,4 @@
-using _21BITV03_Nhom04_website_clothes.Data;
+﻿using _21BITV03_Nhom04_website_clothes.Data;
 using _21BITV03_Nhom04_website_clothes.Database;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
@@ -18,6 +18,7 @@ builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(option => {
         option.LoginPath = "/Account/Login";
+        option.AccessDeniedPath = "/Account/AccessDenied"; // Chuyển hướng nếu không đủ quyền
         option.ExpireTimeSpan = TimeSpan.FromDays(30);
     });
 

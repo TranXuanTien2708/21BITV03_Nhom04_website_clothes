@@ -188,5 +188,10 @@ namespace _21BITV03_Nhom04_website_clothes.Controllers
             ViewBag.Roles = _context.AspNetRoles.ToList();
             return View(model);
         }
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
     }
 }

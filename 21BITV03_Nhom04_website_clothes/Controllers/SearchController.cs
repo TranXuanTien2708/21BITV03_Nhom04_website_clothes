@@ -1,12 +1,15 @@
 ﻿using _21BITV03_Nhom04_website_clothes.Data;
 using _21BITV03_Nhom04_website_clothes.Helper;
 using _21BITV03_Nhom04_website_clothes.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace _21BITV03_Nhom04_website_clothes.Controllers
 {
+    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class SearchController : Controller
     {
         private readonly WebsiteClothesContext _context;
